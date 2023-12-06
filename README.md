@@ -12,4 +12,4 @@
 # Part 3: Currency Converter Program
 - this part of the project is similar to part 2, however it uses a ejs view engine. There is a currency converter page, about page, and a page that generates a table of exchange rates between two selected currencies at the beginning of the month for each month in 2023 with the % lossed or gained compared to the previous month.
   
-![Capture](https://github.com/TJH2/SD-230-Final/assets/82971033/b50cf3b5-dc5a-4333-900b-4f3573a7bc54)
+![Capture](https://github.com/TJH2/SD-230-Final/assets/82971033/93711a21-a23d-4714-845b-500efca2ce81)

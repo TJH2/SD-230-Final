@@ -60,18 +60,5 @@
                     <hr>
                 </div>
             <div>
-
-            <script>
-                // This is added because Firefox remembers previous inputs after refresh, so I'm resetting the page manually with JS
-                document.getElementById("from").value = "USD";
-                document.getElementById("to").value = "USD";
-                document.getElementById("amount").value = "0";
-                let currency = new Intl.NumberFormat('en-US', {
-                    currencyDisplay: "symbol",
-                    style: 'currency',
-                    currency: "USD",
-                });
-                document.getElementById("amount").value = currency.format(document.getElementById("amount").value);
-            </script>
-            <script src="js/script.js" defer></script> 
+            <script src="js/converter.js"></script> 
         </section>

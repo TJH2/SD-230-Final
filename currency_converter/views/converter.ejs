@@ -60,5 +60,11 @@
                     <hr>
                 </div>
             <div>
+                <script>
+                    // pulls names from json file in models
+                    let currency_names = <%- JSON.stringify(information[1]) %>;
+                    // pulls backup currencies from json file incase API doesn't work
+                    let conversion_rates = <%- JSON.stringify(information[2]) %>;
+                </script>
             <script src="js/converter.js"></script> 
         </section>

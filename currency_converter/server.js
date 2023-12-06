@@ -5,7 +5,7 @@ const port = 5000;
 
 const app = express();
 
-// ROUTES
+// ROUTE VARIABLES
 const indexRouter = require("./routes/index");
 const aboutRouter = require("./routes/about");
 const tableRouter = require("./routes/table");
@@ -33,7 +33,7 @@ app.use(helmet.contentSecurityPolicy({
   },
 }));
 
-
+// ROUTES
 app.use("/", indexRouter);
 app.use("/about", aboutRouter);
 app.use("/table", tableRouter);

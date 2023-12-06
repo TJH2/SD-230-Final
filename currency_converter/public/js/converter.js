@@ -1,33 +1,3 @@
-// currency names/display object
-let currency_names = {
-    "AUD": "Australian Dollar",
-    "CAD": "Canadian Dollar",
-    "CLP": "Chilean Peso",
-    "CNY" : "Chinese Yuan",
-    "EUR" : "Euro",
-    "GBP" : "British Pound Sterling",
-    "INR" :"Indian Rupee",
-    "JPY" : "Japanese Yen",
-    "RUB" : "Russian Ruble",
-    "USD" : "United States Dollar",
-    "ZAR": "South African Rand"
-    }
-
-    // conversion rates to use as backup with API request fails
-    let conversion_rates = {
-        "AUD": 1.531863,
-        "CAD": 1.36029,
-        "CLP": 950.662057,
-        "CNY" : 7.128404,
-        "EUR" : 1.03203,
-        "GBP" : 0.920938,
-        "INR" : 81.255504,
-        "JPY" : 143.376504,
-        "RUB" : 57.875038,
-        "USD" : 1,
-        "ZAR": 17.92624
-    }
-
 // function to convert between currencies
 function convert_currency(amount, fromCC, toCC) {
 

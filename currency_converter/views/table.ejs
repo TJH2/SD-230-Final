@@ -40,5 +40,9 @@
     </div>
 
     <div id="timeTable"></div>
-    <script src="js/table.js"></script> 
+    <script>
+        // conversion from 1/23 to 12/23
+        let conversion_rates = <%- JSON.stringify(information[0]) %>;
+    </script>
+    <script src="js/table.js"></script>
 </section>

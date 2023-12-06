@@ -94,6 +94,20 @@
         return;
     }
 
+    //function to show change in rate over time
+    function change(number1, number2) {
+        let change = number1 / number2;
+
+        if(change >= 1) {
+            change -= 1;
+        } else {
+            change = 1 - change;
+            change = change * - 1;
+        }
+
+        return change.toFixed(3) + "%";
+    }
+
     function create_table(currency1, currency2) {
 
         if(currency1 == currency2) {
@@ -105,18 +119,18 @@
         let table = document.getElementById("timeTable");
         table.innerHTML = 
         "<table>" + 
-        "<tr><th>Date</th><th>" + currency1 +"</th><th>" + currency2 + "</th><th>Change</th></tr>" + 
-        "<tr><td>DEC 2023</td><td>1.00</td><td>" + converter(currency1, currency2, 12) + "</td><td>" + (converter(currency1, currency2, 12) - converter(currency1, currency2, 11)).toFixed(3) + "</td></tr>" +
-        "<tr><td>NOV 2023</td><td>1.00</td><td>" + converter(currency1, currency2, 11) + "</td><td>" + (converter(currency1, currency2, 11) - converter(currency1, currency2, 10)).toFixed(3) + "</td></tr>" +
-        "<tr><td>OCT 2023</td><td>1.00</td><td>" + converter(currency1, currency2, 10) + "</td><td>" + (converter(currency1, currency2, 10) - converter(currency1, currency2, 9)).toFixed(3) + "</td></tr>" +
-        "<tr><td>SEP 2023</td><td>1.00</td><td>" + converter(currency1, currency2, 9) + "</td><td>" + (converter(currency1, currency2, 9) - converter(currency1, currency2, 8)).toFixed(3) + "</td></tr>" +
-        "<tr><td>AUG 2023</td><td>1.00</td><td>" + converter(currency1, currency2, 8) + "</td><td>" + (converter(currency1, currency2, 8) - converter(currency1, currency2, 7)).toFixed(3) + "</td></tr>" +
-        "<tr><td>JUL 2023</td><td>1.00</td><td>" + converter(currency1, currency2, 7) + "</td><td>" + (converter(currency1, currency2, 7) - converter(currency1, currency2, 6)).toFixed(3) + "</td></tr>" +
-        "<tr><td>JUN 2023</td><td>1.00</td><td>" + converter(currency1, currency2, 6) + "</td><td>" + (converter(currency1, currency2, 6) - converter(currency1, currency2, 5)).toFixed(3) + "</td></tr>" +
-        "<tr><td>MAY 2023</td><td>1.00</td><td>" + converter(currency1, currency2, 5) + "</td><td>" + (converter(currency1, currency2, 5) - converter(currency1, currency2, 4)).toFixed(3) + "</td></tr>" +
-        "<tr><td>APR 2023</td><td>1.00</td><td>" + converter(currency1, currency2, 4) + "</td><td>" + (converter(currency1, currency2, 4) - converter(currency1, currency2, 3)).toFixed(3) + "</td></tr>" +
-        "<tr><td>MAR 2023</td><td>1.00</td><td>" + converter(currency1, currency2, 3) + "</td><td>" + (converter(currency1, currency2, 3) - converter(currency1, currency2, 2)).toFixed(3) + "</td></tr>" +
-        "<tr><td>FEB 2023</td><td>1.00</td><td>" + converter(currency1, currency2, 2) + "</td><td>" + (converter(currency1, currency2, 2) - converter(currency1, currency2, 1)).toFixed(3) + "</td></tr>" +
+        "<tr><th>Date</th><th>" + currency1 +"</th><th>" + currency2 + "</th><th>% Change</th></tr>" + 
+        "<tr><td>DEC 2023</td><td>1.00</td><td>" + converter(currency1, currency2, 12) + "</td><td>" + change(converter(currency1, currency2, 12), converter(currency1, currency2, 11)) + "</td></tr>" +
+        "<tr><td>NOV 2023</td><td>1.00</td><td>" + converter(currency1, currency2, 11) + "</td><td>" + change(converter(currency1, currency2, 11), converter(currency1, currency2, 10)) + "</td></tr>" +
+        "<tr><td>OCT 2023</td><td>1.00</td><td>" + converter(currency1, currency2, 10) + "</td><td>" + change(converter(currency1, currency2, 10), converter(currency1, currency2, 9)) + "</td></tr>" +
+        "<tr><td>SEP 2023</td><td>1.00</td><td>" + converter(currency1, currency2, 9) + "</td><td>" + change(converter(currency1, currency2, 9), converter(currency1, currency2, 8)) + "</td></tr>" +
+        "<tr><td>AUG 2023</td><td>1.00</td><td>" + converter(currency1, currency2, 8) + "</td><td>" + change(converter(currency1, currency2, 8), converter(currency1, currency2, 7)) + "</td></tr>" +
+        "<tr><td>JUL 2023</td><td>1.00</td><td>" + converter(currency1, currency2, 7) + "</td><td>" + change(converter(currency1, currency2, 7), converter(currency1, currency2, 6)) + "</td></tr>" +
+        "<tr><td>JUN 2023</td><td>1.00</td><td>" + converter(currency1, currency2, 6) + "</td><td>" + change(converter(currency1, currency2, 6), converter(currency1, currency2, 5)) + "</td></tr>" +
+        "<tr><td>MAY 2023</td><td>1.00</td><td>" + converter(currency1, currency2, 5) + "</td><td>" + change(converter(currency1, currency2, 5), converter(currency1, currency2, 4)) + "</td></tr>" +
+        "<tr><td>APR 2023</td><td>1.00</td><td>" + converter(currency1, currency2, 4) + "</td><td>" + change(converter(currency1, currency2, 4), converter(currency1, currency2, 3)) + "</td></tr>" +
+        "<tr><td>MAR 2023</td><td>1.00</td><td>" + converter(currency1, currency2, 3) + "</td><td>" + change(converter(currency1, currency2, 3), converter(currency1, currency2, 2)) + "</td></tr>" +
+        "<tr><td>FEB 2023</td><td>1.00</td><td>" + converter(currency1, currency2, 2) + "</td><td>" + change(converter(currency1, currency2, 2), converter(currency1, currency2, 1)) + "</td></tr>" +
         "<tr><td>JAN 2023</td><td>1.00</td><td>" + converter(currency1, currency2, 1) + "</td><td></td></tr>" +
         "</table>";
 
